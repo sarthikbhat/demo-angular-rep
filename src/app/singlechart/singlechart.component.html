@@ -1,0 +1,31 @@
+<p>singlechart works!</p>
+
+
+<div style="width:90%;position: relative;">
+   
+    <div [matMenuTriggerFor]="menu" id="exportMenu" class="menu"    >
+        ...
+    </div>
+    <div id="echartss" echarts [options]="option">
+    </div>
+</div>
+<div id="showData"></div>
+
+
+<mat-menu #menu="matMenu" class="custom__menu">
+    <button mat-menu-item [matMenuTriggerFor]="Image">Image</button>
+    <button mat-menu-item [matMenuTriggerFor]="Data">Data</button>
+    <button mat-menu-item (click)="print()">Print</button>
+</mat-menu>
+
+<mat-menu #Image="matMenu" class="custom__menu">
+    <button mat-menu-item (click)="toImg('png')" >PNG</button>
+    <button mat-menu-item (click)="toImg('jpeg')">JPG</button>
+    <button mat-menu-item >SVG</button>
+</mat-menu>
+
+<mat-menu #Data="matMenu" class="custom__menu">
+    <button mat-menu-item (click)="toJson()">JSON</button>
+    <button mat-menu-item (click)="download_table_as_csv()">CSV</button>
+    <button mat-menu-item (click)="saveHtml()">HTML</button>
+</mat-menu>

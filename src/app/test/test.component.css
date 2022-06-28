@@ -1,0 +1,80 @@
+.main{
+    padding: 10px;
+    position: relative;
+}
+
+.menulayer{
+    list-style: none;
+}
+
+.menulayer0{
+    position: absolute;
+    cursor: pointer;
+    background-color: rgb(217,217,217);
+    padding: 8px;
+    text-decoration: underline;
+    border-radius: 3px;
+}
+
+.menulayer0:hover > .menulayer1{
+    display: block;
+}
+
+.itemlayer0{
+    width: 100%;
+    background-color: rgb(217,217,217);
+}
+
+.menulayer1{
+    position: absolute;
+    display: none;
+    left: -20%;
+    top: -20%;
+}
+.menulayer2{
+    position: absolute;
+    left: 65%;
+    top: 20%;
+}
+
+.menulayer3{
+    position: absolute;
+    left: 65%;
+    top: 40%;
+}
+
+.m2-img, .m3-img{
+    display: none;
+}
+
+.menulayer1 li, .menulayer2 li, .menulayer3 li{
+    list-style: none;
+    padding: 8px;
+    background-color: rgb(217,217,217);
+    border-radius: 3px;
+    margin-top: 1px;
+}
+
+.menulayer1 li span{
+    text-align: center;
+    text-decoration: underline;
+    /* border-bottom: 1px solid rgb(71, 52, 52); */
+    background-color: rgb(217,217,217);
+    /* padding: 8px ; */
+}
+
+#img:hover{
+    background-color: red;
+}
+#data:hover{
+    background-color: red;
+}
+
+#img:hover > .m2-img{
+    display: block;
+    
+}
+
+#data:hover > .m3-img{
+    display: block;
+}
